@@ -16,7 +16,7 @@ for (let i = 0; i < 9; ++i) {
 
 // Initialize the variable
 let songIndex = 0;
-let audioElement = new Audio("/assets/songs/1.mp3");
+let audioElement = new Audio("assets/songs/1.mp3");
 let masterPlay = document.getElementById("master-play");
 let myProgressBar = document.getElementById("my-progress-bar");
 let gif = document.getElementById("gif");
@@ -24,15 +24,15 @@ let masterSongName = document.getElementById("master-song-name");
 let songItems = Array.from(document.getElementsByClassName("song-item"));
 
 let songs = [
-    { songName: "Questions", songPath: "/assets/songs/1.mp3", coverPath: "/assets/images/cover1.jpg", songDuration: "03:22" },
-    { songName: "Got It All", songPath: "/assets/songs/2.mp3", coverPath: "/assets/images/cover2.jpg", songDuration: "03:10" },
-    { songName: "Kitho", songPath: "/assets/songs/3.mp3", coverPath: "/assets/images/cover3.jpg", songDuration: "03:19" },
-    { songName: "Layeeah", songPath: "/assets/songs/4.mp3", coverPath: "/assets/images/cover4.jpg", songDuration: "03:06" },
-    { songName: "Solace", songPath: "/assets/songs/5.mp3", coverPath: "/assets/images/cover5.jpg", songDuration: "03:16" },
-    { songName: "Sambh", songPath: "/assets/songs/6.mp3", coverPath: "/assets/images/cover6.jpg", songDuration: "02:55" },
-    { songName: "Tu Hi Aa", songPath: "/assets/songs/7.mp3", coverPath: "/assets/images/cover7.jpg", songDuration: "03:11" },
-    { songName: "Vaari", songPath: "/assets/songs/8.mp3", coverPath: "/assets/images/cover8.jpg", songDuration: "02:53" },
-    { songName: "Vibe", songPath: "/assets/songs/9.mp3", coverPath: "/assets/images/cover9.jpg", songDuration: "03:13" }
+    { songName: "Questions", songPath: "assets/songs/1.mp3", coverPath: "assets/images/cover1.jpg", songDuration: "03:22" },
+    { songName: "Got It All", songPath: "assets/songs/2.mp3", coverPath: "assets/images/cover2.jpg", songDuration: "03:10" },
+    { songName: "Kitho", songPath: "assets/songs/3.mp3", coverPath: "assets/images/cover3.jpg", songDuration: "03:19" },
+    { songName: "Layeeah", songPath: "assets/songs/4.mp3", coverPath: "assets/images/cover4.jpg", songDuration: "03:06" },
+    { songName: "Solace", songPath: "assets/songs/5.mp3", coverPath: "assets/images/cover5.jpg", songDuration: "03:16" },
+    { songName: "Sambh", songPath: "assets/songs/6.mp3", coverPath: "assets/images/cover6.jpg", songDuration: "02:55" },
+    { songName: "Tu Hi Aa", songPath: "assets/songs/7.mp3", coverPath: "assets/images/cover7.jpg", songDuration: "03:11" },
+    { songName: "Vaari", songPath: "assets/songs/8.mp3", coverPath: "assets/images/cover8.jpg", songDuration: "02:53" },
+    { songName: "Vibe", songPath: "assets/songs/9.mp3", coverPath: "assets/images/cover9.jpg", songDuration: "03:13" }
 ]
 
 songItems.forEach((element, i) => {
@@ -84,7 +84,7 @@ Array.from(document.getElementsByClassName("song-item-play")).forEach((element) 
         let songIndex = parseInt(e.target.id);
         e.target.classList.remove("fa-play-circle");
         e.target.classList.add("fa-pause-circle");
-        audioElement.src = `/assets/songs/${songIndex+1}.mp3`;
+        audioElement.src = `assets/songs/${songIndex+1}.mp3`;
         masterSongName.innerText = songs[songIndex].songName;
         audioElement.currentTime = 0;
         audioElement.play();
@@ -102,7 +102,7 @@ document.getElementById("next").addEventListener("click", () => {
         songIndex += 1
     }
 
-    audioElement.src = `/assets/songs/${songIndex+1}.mp3`;
+    audioElement.src = `assets/songs/${songIndex+1}.mp3`;
     masterSongName.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
     audioElement.play();
@@ -119,7 +119,7 @@ document.getElementById("previous").addEventListener("click", () => {
         songIndex -= 1
     }
 
-    audioElement.src = `/assets/songs/${songIndex+1}.mp3`;
+    audioElement.src = `assets/songs/${songIndex+1}.mp3`;
     masterSongName.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
     audioElement.play();
