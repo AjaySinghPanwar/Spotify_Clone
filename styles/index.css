@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: bisque;
+}
+
+nav {
+  font-family: "Rubik", sans-serif;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  height: 60px;
+  background-color: black;
+}
+
+nav ul li {
+  color: white;
+  padding: 0 20px;
+  font-size: 16px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover {
+  cursor: pointer;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  padding-left: 0;
+}
+
+.brand img {
+  width: 90px;
+}
+
+.container {
+  min-height: 70vh;
+  background-color: black;
+  color: white;
+  margin: 20px auto;
+  width: 70%;
+  border-radius: 12px;
+  padding: 35px;
+  background: url("/assets/images/bg.jpg") no-repeat center/cover;
+}
+
+.bottom {
+  position: sticky;
+  bottom: 0;
+  height: 80px;
+  color: white;
+  background-color: black;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#my-progress-bar {
+  width: 80vw;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.icons {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.icons i {
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.song-item-container {
+  margin-top: 35px;
+}
+
+.song-item {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: black;
+  width: 40%;
+  border-radius: 30px;
+  margin: 5px 0;
+  font-family: "Baloo Chettan 2", cursive;
+}
+
+.song-item img {
+  width: 35px;
+  height: 35px;
+  margin: 0 23px;
+  border-radius: 30px;
+}
+
+.timestamp {
+  margin: 0 10px;
+}
+
+.timestamp i {
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.song-info {
+  position: absolute;
+  left: 10vw;
+  font-family: "Baloo Chettan 2", cursive;
+  margin-top: 35px;
+}
+
+.song-info img {
+  opacity: 0;
+  transition: 0.5s ease-in;
+}
+
+#gif {
+  margin-right: 15px;
+}
+
+/* Responsive Design */
+
+@media only screen and (max-width: 900px) and (min-width: 590px) {
+  .song-list{
+    text-align: center;
+  }
+  
+  .song-item {
+    width: 80%;
+    margin: 5px auto;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  .song-list{
+    text-align: center;
+  }
+
+  .song-list h1{
+    font-size: 1.5rem;
+  }
+
+  .song-item {
+    width: 100%;
+    margin: 5px auto;
+  }
+
+  #my-progress-bar {
+    margin-top: 0;
+  }
+
+  .bottom {
+    height: 150px;
+  }
+
+  .song-info {
+    margin-top: 80px;
+    text-align: center;
+    left: auto;
+  }
+
+  #gif{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+}
